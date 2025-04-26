@@ -1,0 +1,13 @@
+﻿/tests/.vs
+/tests/bin/
+/tests/out/
+/.vs
+.Rproj.user
+*.tex
+.Rhistory
+/docs/*
+examples/.vs
+examples/out
+bin
+bin-lib
+out
