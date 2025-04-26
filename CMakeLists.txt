@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 project(tinyexprpp)
@@ -22,9 +22,9 @@ set(TE_SOURCES
 set(TE_HEADERS
     tinyexpr.h
 )
-add_library(${CMAKE_PROJECT_NAME} STATIC ${TE_SOURCES} ${TE_HEADERS})
-target_include_directories(${CMAKE_PROJECT_NAME}  PUBLIC ".")
-target_compile_features(${CMAKE_PROJECT_NAME}  PUBLIC cxx_std_23)
+add_library(${PROJECT_NAME} STATIC ${TE_SOURCES} ${TE_HEADERS})
+target_include_directories(${PROJECT_NAME}  PUBLIC ".")
+target_compile_features(${PROJECT_NAME}  PUBLIC cxx_std_23)
 
 if (TE_BUILD_EXAMPLES)
     add_subdirectory(examples)

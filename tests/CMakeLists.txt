@@ -93,7 +93,9 @@ endif()
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 
-add_executable(${PROJECT_NAME} ../tinyexpr.cpp tetests.cpp testingmain.cpp)
+add_executable(${PROJECT_NAME} tetests.cpp testingmain.cpp)
+target_link_libraries(${PROJECT_NAME} PRIVATE ${CMAKE_PROJECT_NAME})
+
 if(MSVC)
     target_compile_definitions(${PROJECT_NAME} PUBLIC _DISABLE_VECTOR_ANNOTATION _DISABLE_STRING_ANNOTATION
                                $<$<CONFIG:Release>:NDEBUG>)

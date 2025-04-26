@@ -35,7 +35,7 @@ format args="nothing":
 alias r := run
 default_args := 'args here'
 run args=default_args:
-    @Write-Host {{default_args}} -ForegroundColor Red
+    ./bin/te_demo.exe
 
 var_test := "test format"
 alias t := test
